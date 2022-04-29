@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/textUser"
+        app:layout_constraintBottom_toBottomOf="@id/buttonVisits"
+        android:background="@color/design_default_color_secondary"
+        />
+
+    <TextView
+        android:id="@+id/textUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User:"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textVisits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total visits:"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/textUser"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonVisits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textVisits"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Get total visits" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/textOnlineUsers"
+        app:layout_constraintBottom_toBottomOf="@id/buttonKickUser"
+        android:background="@color/purple_700"
+        />
+
+    <TextView
+        android:id="@+id/textOnlineUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:layout_marginTop="32dp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonVisits" />
+
+    <Button
+        android:id="@+id/buttonOnlineUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textOnlineUsers"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Get online users" />
+
+    <Button
+        android:id="@+id/buttonKickUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonOnlineUsers"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Kick random user" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
